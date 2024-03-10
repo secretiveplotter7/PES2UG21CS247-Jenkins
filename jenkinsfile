@@ -12,15 +12,15 @@ pipeline{
         sh './output'
       }
     }
-    stage('Display){
+    stage('Deploy'){
       steps{
-        echo 'deploy'
+        echo 'display'
       }
     }
   }
   post{
     failure{
-      error 'Pipeline Failed'
+      error 'Pipeline failed'
     }
   }
 }
